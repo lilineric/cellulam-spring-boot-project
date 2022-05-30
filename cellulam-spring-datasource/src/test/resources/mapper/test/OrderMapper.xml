@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cellulam.spring.datasource.test.dal.OrderDAO">
+    <resultMap id="ResultMap" type="com.cellulam.spring.datasource.test.po.OrderDO">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="uid" jdbcType="BIGINT" property="uid" />
+        <result column="title" jdbcType="VARCHAR" property="title" />
+        <result column="amount" jdbcType="BIGINT" property="amount" />
+        <result column="create_time" jdbcType="BIGINT" property="createTime" />
+        <result column="update_time" jdbcType="BIGINT" property="updateTime" />
+    </resultMap>
+
+    <select id="getById" parameterType="long" resultMap="ResultMap">
+        select * from t_order where id = #{id}
+    </select>
+
+    <insert id="addOrder" parameterType="com.cellulam.spring.datasource.test.po.UserDO"
+            keyColumn="id" keyProperty="id" useGeneratedKeys="true">
+        insert t_order (uid, amount, title, create_time, update_time)
+        VALUE (#{uid}, #{amount}, #{title}, #{createTime,javaType=java.time.LocalDateTime,jdbcType=BIGINT}, #{updateTime,javaType=java.time.LocalDateTime,jdbcType=BIGINT})
+    </insert>
+
+</mapper>
+
