@@ -1,0 +1,30 @@
+spring:
+  shardingsphere:
+    datasource:
+      names: course
+      course:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbcUrl: jdbc:mysql://localhost:3306/course_db?characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
+        username: root
+        password: root123
+    sharding:
+      tables:
+        course:
+          actual-data-nodes: course.course_$->{1..2}
+          key-generator:
+            column: cid
+            type: SNOWFLAKE
+          table-strategy:
+            inline:
+              sharding-column: cid
+              algorithm-expression: course_$->{cid % 2 + 1}
+    props:
+      sql:
+        show: true
+
+
+mybatis:
+  type-aliases-package: com.cellulam.spring.db.test.po
+  mapper-locations: classpath:mapper/**/*.xml
+  type-handlers-package: com.cellulam.spring.ds.handlers
