@@ -1,5 +1,6 @@
-package com.cellulam.spring.core;
+package com.cellulam.spring.core.listeners;
 
+import com.cellulam.spring.core.BeanDefinitionRegistryAction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;

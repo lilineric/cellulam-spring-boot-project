@@ -1,0 +1,10 @@
+cellulam:
+  meta:
+    application:
+      name: ${spring.application.name}
+    port: ${server.port}
+    jdbc:
+      url: jdbc:mysql://localhost:3306/db_meta?characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
+      username: root
+      password: root123
+

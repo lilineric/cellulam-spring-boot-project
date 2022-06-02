@@ -22,6 +22,7 @@
         <module>cellulam-spring-core</module>
         <module>cellulam-spring-db</module>
         <module>cellulam-spring-test</module>
+        <module>cellulam-spring-meta</module>
     </modules>
 
     <dependencies>

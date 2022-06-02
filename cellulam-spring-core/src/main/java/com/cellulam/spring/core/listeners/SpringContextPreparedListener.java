@@ -1,4 +1,4 @@
-package com.cellulam.spring.core;
+package com.cellulam.spring.core.listeners;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,7 +28,7 @@ public class SpringContextPreparedListener implements ApplicationListener<Applic
 
     @Override
     public int getOrder() {
-        return 0;
+        return Ordered.HIGHEST_PRECEDENCE + 100;
     }
 
 }
