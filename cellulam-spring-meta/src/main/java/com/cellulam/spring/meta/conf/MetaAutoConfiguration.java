@@ -26,7 +26,7 @@ public class MetaAutoConfiguration {
     @Bean
     @ConditionalOnMissingBean
     public MetadataContextInitializer metaContextInitializer(WorkerIdAssigner workerIdAssigner) {
-        String appName = SmartEnvironment.env.getProperty(Constants.JDBC_URL);
+        String appName = SmartEnvironment.env.getProperty(Constants.APP_NAME);
         String port = SmartEnvironment.env.getProperty(Constants.SERVER_PORT);
         String jdbcUrl = SmartEnvironment.env.getProperty(Constants.JDBC_URL);
         String username = SmartEnvironment.env.getProperty(Constants.JDBC_USERNAME);
