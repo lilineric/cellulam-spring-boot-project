@@ -16,21 +16,18 @@
         <spring.boot.version>2.7.0</spring.boot.version>
         <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
+        <cellulam.framework.version>1.0-SNAPSHOT</cellulam.framework.version>
+        <cellulam.spring.version>1.0-SNAPSHOT</cellulam.spring.version>
     </properties>
 
     <modules>
         <module>cellulam-spring-core</module>
-        <module>cellulam-spring-db</module>
+        <module>cellulam-spring-sharding-db</module>
         <module>cellulam-spring-test</module>
         <module>cellulam-spring-meta</module>
     </modules>
 
     <dependencies>
-        <dependency>
-            <groupId>com.cellulam.framework</groupId>
-            <artifactId>cellulam-core</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -44,12 +41,54 @@
         </dependency>
     </dependencies>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.cellulam.framework</groupId>
+                <artifactId>cellulam-core</artifactId>
+                <version>${cellulam.framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cellulam.framework</groupId>
+                <artifactId>cellulam-metadata</artifactId>
+                <version>${cellulam.framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cellulam.framework</groupId>
+                <artifactId>cellulam-script</artifactId>
+                <version>${cellulam.framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cellulam.framework</groupId>
+                <artifactId>cellulam-spring-core</artifactId>
+                <version>${cellulam.spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cellulam.framework</groupId>
+                <artifactId>cellulam-spring-sharding-db</artifactId>
+                <version>${cellulam.spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cellulam.framework</groupId>
+                <artifactId>cellulam-spring-meta</artifactId>
+                <version>${cellulam.spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cellulam.framework</groupId>
+                <artifactId>cellulam-spring-test</artifactId>
+                <version>${cellulam.spring.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
