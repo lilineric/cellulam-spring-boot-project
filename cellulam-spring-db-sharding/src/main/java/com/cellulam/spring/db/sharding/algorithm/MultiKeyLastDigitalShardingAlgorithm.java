@@ -16,6 +16,7 @@ import java.util.Map;
 /**
  * Mod the last digital of the multiple sharding keys and route to the same slice.
  * Must be ensured that the last digital of the sharding keys are the same.
+ * @author eric.li
  */
 public class MultiKeyLastDigitalShardingAlgorithm
         extends AbstractShardingAlgorithm<MultiKeyLastDigitalShardingAlgorithm.Configuration>

@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 
 /**
  * spring-context, 在 <code>ApplicationContextInitializedEvent</code> 事件 之后, 设置 applicationContext
+ * @author eric.li
  */
 public final class SmartContext implements ListableBeanFactory {
 

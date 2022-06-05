@@ -8,6 +8,7 @@ import org.springframework.core.Ordered;
 
 /**
  * spring env-prepared 事件监听
+ * @author eric.li
  *
  */
 public class SpringEnvPreparedListener implements ApplicationListener<ApplicationEnvironmentPreparedEvent>, Ordered {

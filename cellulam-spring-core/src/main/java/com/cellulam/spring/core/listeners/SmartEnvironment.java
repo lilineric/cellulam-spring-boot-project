@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 
 /**
  * spring-environment, 在 <code>ApplicationEnvironmentPreparedEvent</code> 事件 之后, 设置 environment
+ * @author eric.li
  */
 public final class SmartEnvironment implements PropertyResolver {
 

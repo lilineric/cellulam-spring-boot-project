@@ -9,6 +9,7 @@ import org.springframework.core.env.ConfigurableEnvironment;
 
 /**
  *  spring context-prepared 事件监听
+ * @author eric.li
  *
  */
 public class SpringContextPreparedListener implements ApplicationListener<ApplicationPreparedEvent>, Ordered {

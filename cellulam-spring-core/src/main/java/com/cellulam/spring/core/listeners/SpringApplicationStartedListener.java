@@ -8,6 +8,7 @@ import org.springframework.core.Ordered;
 
 /**
  *
+ * @author eric.li
  */
 public class SpringApplicationStartedListener implements ApplicationListener<ApplicationStartedEvent>, Ordered {
 

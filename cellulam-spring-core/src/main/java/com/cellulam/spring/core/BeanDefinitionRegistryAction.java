@@ -4,6 +4,7 @@ import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 
 /**
  *
+ * @author eric.li
  */
 public interface BeanDefinitionRegistryAction {
 
