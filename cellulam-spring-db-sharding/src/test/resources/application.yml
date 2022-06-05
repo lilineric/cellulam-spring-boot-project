@@ -21,20 +21,20 @@ spring:
           table-strategy:
             inline:
               sharding-column: cid
-              algorithm-expression: t_course_$->{cid % 1000 % 4}
+              algorithm-expression: t_course_$->{cid % 100 % 4}
         user:
           actual-data-nodes: user.t_user_$->{0..3}
           table-strategy:
             inline:
               sharding-column: uid
-              algorithm-expression: t_user_$->{uid % 1000 % 4}
+              algorithm-expression: t_user_$->{uid % 100 % 4}
         t_user_address:
           actual-data-nodes: user.t_user_address_$->{0..3}
           table-strategy:
             complex:
               sharding-columns: id,uid
               algorithm-class-name: com.cellulam.spring.db.sharding.algorithm.MultiKeyLastDigitalShardingAlgorithm
-              last-digital: 3
+              last-digital: 2
               sharding-expression: t_user_address_$->{lastDigital % 4}
       binding-tables:
         - user,t_user_address
