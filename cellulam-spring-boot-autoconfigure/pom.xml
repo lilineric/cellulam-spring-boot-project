@@ -9,26 +9,26 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cellulam-spring-core</artifactId>
+    <artifactId>cellulam-spring-boot-autoconfigure</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/aspectj/aspectjrt -->
         <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjrt</artifactId>
-            <version>1.5.4</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>1.9.9.1</version>
-            <scope>runtime</scope>
+            <groupId>com.cellulam.framework</groupId>
+            <artifactId>cellulam-spring-core</artifactId>
         </dependency>
         <dependency>
             <groupId>com.cellulam.framework</groupId>
-            <artifactId>cellulam-core</artifactId>
+            <artifactId>cellulam-uid-metadata</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.cellulam.framework</groupId>
+            <artifactId>cellulam-spring-db</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.cellulam.framework</groupId>
+            <artifactId>cellulam-spring-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

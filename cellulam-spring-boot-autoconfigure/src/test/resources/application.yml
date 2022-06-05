@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: test-meta
+  datasource:
+    names: test1,test2
+    test1:
+      type: hikari
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/test1?characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
+      username: root
+      password: root123
+    test2:
+      type: hikari
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/test2?characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
+      username: root
+      password: root123
+  cellulam:
+    metadata:
+      enabled: true
+    sql:
+      type-aliases-package: com.cellulam.spring.autoconfigure.test.db
+      mapper-locations: classpath:mapper/**/*.xml
+      datasource-patterns:
+        - datasource: test1
+          pattern: com.cellulam.spring.autoconfigure.test.db.dal.test1.*
+        - datasource: test2
+          pattern: com.cellulam.spring.autoconfigure.test.db.dal.test2.*
+
+server:
+  port: 1876
+
+

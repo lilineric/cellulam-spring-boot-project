@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cellulam.spring.autoconfigure.test.db.dal.test1.UserDao">
+    <resultMap id="ResultMap" type="com.cellulam.spring.autoconfigure.test.db.po.test1.UserDo">
+        <id column="uid" jdbcType="BIGINT" property="uid" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="status" jdbcType="VARCHAR" property="status" />
+    </resultMap>
+
+    <select id="getById" parameterType="long" resultMap="ResultMap">
+        select * from t_user where uid = #{id}
+    </select>
+
+    <insert id="add" parameterType="com.cellulam.spring.autoconfigure.test.db.po.test1.UserDo"
+            keyColumn="uid" keyProperty="uid">
+          insert t_user (uid, name, status)
+          value (#{uid}, #{name}, #{status})
+    </insert>
+
+    <select id="getAll" resultMap="ResultMap">
+        select * from t_user
+    </select>
+
+</mapper>
+

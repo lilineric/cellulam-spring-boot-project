@@ -22,9 +22,11 @@
 
     <modules>
         <module>cellulam-spring-core</module>
-        <module>cellulam-spring-sharding-db</module>
+        <module>cellulam-spring-db-sharding</module>
         <module>cellulam-spring-test</module>
-        <module>cellulam-spring-meta</module>
+        <module>cellulam-spring-boot-starter</module>
+        <module>cellulam-spring-boot-autoconfigure</module>
+        <module>cellulam-spring-db</module>
     </modules>
 
     <dependencies>
@@ -65,12 +67,22 @@
             </dependency>
             <dependency>
                 <groupId>com.cellulam.framework</groupId>
-                <artifactId>cellulam-spring-sharding-db</artifactId>
+                <artifactId>cellulam-spring-db</artifactId>
                 <version>${cellulam.spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.cellulam.framework</groupId>
-                <artifactId>cellulam-spring-meta</artifactId>
+                <artifactId>cellulam-spring-db-sharding</artifactId>
+                <version>${cellulam.spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cellulam.framework</groupId>
+                <artifactId>cellulam-spring-boot-starter</artifactId>
+                <version>${cellulam.spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.cellulam.framework</groupId>
+                <artifactId>cellulam-spring-boot-autoconfigure</artifactId>
                 <version>${cellulam.spring.version}</version>
             </dependency>
             <dependency>

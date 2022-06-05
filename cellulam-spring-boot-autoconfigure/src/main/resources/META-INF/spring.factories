@@ -1,0 +1,5 @@
+# Auto Configuration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.cellulam.spring.autoconfigure.uid.UidAutoConfiguration,\
+  com.cellulam.spring.autoconfigure.metadata.MetaAutoConfiguration,\
+  com.cellulam.spring.autoconfigure.datasource.DataSourceAutoConfiguration,\
+  com.cellulam.spring.autoconfigure.mybatis.MybatisAutoConfiguration

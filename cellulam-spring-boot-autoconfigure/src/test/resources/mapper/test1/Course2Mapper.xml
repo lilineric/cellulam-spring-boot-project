@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cellulam.spring.autoconfigure.test.db.dal.test1.Course2Dao">
+    <resultMap id="ResultMap" type="com.cellulam.spring.autoconfigure.test.db.po.test2.CourseDo">
+        <id column="cid" jdbcType="BIGINT" property="cid" />
+        <result column="cname" jdbcType="VARCHAR" property="cname" />
+        <result column="user_id" jdbcType="BIGINT" property="userId" />
+        <result column="status" jdbcType="VARCHAR" property="status" />
+    </resultMap>
+
+    <select id="getById" parameterType="long" resultMap="ResultMap">
+        select * from t_course where cid = #{cid}
+    </select>
+
+</mapper>
+
