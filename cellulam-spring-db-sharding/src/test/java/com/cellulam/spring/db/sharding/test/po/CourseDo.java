@@ -12,6 +12,6 @@ public class CourseDo {
     private String cname;
     private Long userId;
     private String status;
-    private LocalDateTime createTime;
-    private LocalDateTime updateTime;
+    private Long createTime;
+    private Long updateTime;
 }

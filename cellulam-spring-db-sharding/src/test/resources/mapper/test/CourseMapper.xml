@@ -17,7 +17,7 @@
     <insert id="add" parameterType="com.cellulam.spring.db.sharding.test.po.CourseDo"
             keyColumn="cid" keyProperty="cid">
           insert course (cid, cname, user_id, status, create_time, update_time)
-          value (#{cid}, #{cname}, #{userId}, #{status}, #{createTime,javaType=java.time.LocalDateTime,jdbcType=BIGINT}, #{updateTime,javaType=java.time.LocalDateTime,jdbcType=BIGINT})
+          value (#{cid}, #{cname}, #{userId}, #{status}, #{createTime}, #{updateTime})
     </insert>
 
     <select id="getAll" resultMap="ResultMap">

@@ -33,7 +33,7 @@ spring:
           table-strategy:
             complex:
               sharding-columns: id,uid
-              algorithm-class-name: com.cellulam.spring.db.algorithm.MultiKeyLastDigitalShardingAlgorithm
+              algorithm-class-name: com.cellulam.spring.db.sharding.algorithm.MultiKeyLastDigitalShardingAlgorithm
               last-digital: 3
               sharding-expression: t_user_address_$->{lastDigital % 4}
       binding-tables:

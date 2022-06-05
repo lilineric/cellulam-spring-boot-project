@@ -29,8 +29,8 @@ public class ShardingJdbcTest extends BaseUnitTest {
         user.setUid(System.currentTimeMillis());
         user.setName("Jack");
         user.setStatus("Normal");
-        user.setCreateTime(LocalDateTime.now());
-        user.setUpdateTime(LocalDateTime.now());
+        user.setCreateTime(System.currentTimeMillis());
+        user.setUpdateTime(System.currentTimeMillis());
         userDao.add(user);
 
         System.out.println("course: " + userDao.getById(user.getUid()));
@@ -39,8 +39,8 @@ public class ShardingJdbcTest extends BaseUnitTest {
         course.setCname("Java");
         course.setUserId(100L);
         course.setStatus("Normal");
-        course.setCreateTime(LocalDateTime.now());
-        course.setUpdateTime(LocalDateTime.now());
+        course.setCreateTime(System.currentTimeMillis());
+        course.setUpdateTime(System.currentTimeMillis());
         courseDao.add(course);
 
         System.out.println("course: " + courseDao.getById(course.getCid()));
@@ -50,8 +50,8 @@ public class ShardingJdbcTest extends BaseUnitTest {
         course.setCname("Python");
         course.setUserId(100L);
         course.setStatus("Simple");
-        course.setCreateTime(LocalDateTime.now());
-        course.setUpdateTime(LocalDateTime.now());
+        course.setCreateTime(System.currentTimeMillis());
+        course.setUpdateTime(System.currentTimeMillis());
         courseDao.add(course);
         System.out.println("course: " + courseDao.getById(course.getCid()));
 
@@ -63,8 +63,8 @@ public class ShardingJdbcTest extends BaseUnitTest {
         user.setUid(System.currentTimeMillis());
         user.setName("Tom");
         user.setStatus("Disabled");
-        user.setCreateTime(LocalDateTime.now());
-        user.setUpdateTime(LocalDateTime.now());
+        user.setCreateTime(System.currentTimeMillis());
+        user.setUpdateTime(System.currentTimeMillis());
         userDao.add(user);
         System.out.println("user: " + userDao.getById(user.getUid()));
 
@@ -80,8 +80,8 @@ public class ShardingJdbcTest extends BaseUnitTest {
         user.setUid(System.currentTimeMillis());
         user.setName("Jack");
         user.setStatus("Normal");
-        user.setCreateTime(LocalDateTime.now());
-        user.setUpdateTime(LocalDateTime.now());
+        user.setCreateTime(System.currentTimeMillis());
+        user.setUpdateTime(System.currentTimeMillis());
         userDao.add(user);
         System.out.println("user: " + userDao.getById(user.getUid()));
 

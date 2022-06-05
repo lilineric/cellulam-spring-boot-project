@@ -11,6 +11,6 @@ public class UserDo {
     private Long uid;
     private String name;
     private String status;
-    private LocalDateTime createTime;
-    private LocalDateTime updateTime;
+    private Long createTime;
+    private Long updateTime;
 }
