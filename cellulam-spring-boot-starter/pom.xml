@@ -14,10 +14,6 @@
     <dependencies>
         <dependency>
             <groupId>com.cellulam.framework</groupId>
-            <artifactId>cellulam-spring-db</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.cellulam.framework</groupId>
             <artifactId>cellulam-spring-boot-autoconfigure</artifactId>
         </dependency>
     </dependencies>
