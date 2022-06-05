@@ -1,6 +1,15 @@
 # cellulam-spring-boot-project
 It depends on Project [cellulam-framework](https://github.com/lilineric/cellulam-framework)
 
+## Quick Start
+```xml
+<dependency>
+    <groupId>com.cellulam.framework</groupId>
+    <artifactId>cellulam-spring-boot-starter</artifactId>
+    <version>${cellulam.spring.version}</version>
+</dependency>
+```
+
 ## TODO
 - [x] Distributed UID
 - [x] Multiple DataSource
