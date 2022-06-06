@@ -16,7 +16,7 @@ public class UidProperties {
     /**
      * Take the last digits of the pid and append them to the UID
      */
-    private int pidSubDigits = 3;
+    private int pidSubDigits = 2;
 
     /**
      * The workerId cannot be null when using {@link com.cellulam.uid.snowflake.SnowflakeGenerator}

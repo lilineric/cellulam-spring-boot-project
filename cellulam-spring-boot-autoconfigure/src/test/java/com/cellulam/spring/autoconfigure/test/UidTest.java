@@ -20,7 +20,7 @@ public class UidTest extends BaseUnitTest {
         long uid2 = uidAppendGenerator.nextId(uid1);
         System.out.println(uid1);
         System.out.println(uid2);
-        Assert.assertEquals(uid1 % 1000, uid2 % 1000);
+        Assert.assertEquals(uid1 % 100, uid2 % 100);
     }
 
     @Test

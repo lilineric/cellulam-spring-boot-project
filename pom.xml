@@ -94,6 +94,24 @@
         </dependencies>
     </dependencyManagement>
 
+    <distributionManagement>
+        <repository>
+            <id>github-release-deploy</id>
+            <url>https://maven.pkg.github.com/lilineric/maven-repo-release</url>
+        </repository>
+        <snapshotRepository>
+            <id>github-snapshot-deploy</id>
+            <url>https://maven.pkg.github.com/lilineric/maven-repo-snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>github-snapshot</id>
+            <url>https://maven.pkg.github.com/lilineric/maven-repo-snapshot</url>
+        </repository>
+    </repositories>
+
 
     <build>
         <plugins>
