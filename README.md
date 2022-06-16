@@ -125,7 +125,7 @@ It depends on Project [cellulam-framework](https://github.com/lilineric/cellulam
 - [ ] Distributed Transaction
     - [ ] TCC
     - [ ] Saga
-    - [*] [Transaction Table](https://github.com/lilineric/trans-msg-db)
+    - [x] [Transaction Table](https://github.com/lilineric/trans-msg-db)
     - [ ] Transaction Message
 
 
